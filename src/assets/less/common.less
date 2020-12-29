@@ -1,0 +1,101 @@
+//html标签字体等初始化
+.iconfont {
+  font-family: 'iconfont' !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: middle;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  color: @h1c;
+  font-family: 'Helvetica Neue', Helvetica, Arial, 'PingFang SC',
+    'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei', 'WenQuanYi Micro Hei',
+    sans-serif;
+  -webkit-overflow-scrolling: touch;
+}
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin: 0;
+  padding: 0;
+}
+input {
+  -webkit-user-select: auto !important;
+  -moz-user-select: auto !important;
+  -ms-user-select: auto !important;
+  user-select: auto !important;
+}
+textarea {
+  //苹果必须加这个 android不加也行
+  -webkit-user-select: auto !important; /*webkit浏览器*/
+  -moz-user-select: auto !important;
+  -ms-user-select: auto !important;
+  user-select: auto !important;
+}
+.img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.view {
+  -webkit-transition: all 0.36s ease;
+  transition: all 0.36s ease;
+}
+.fade-enter {
+  opacity: 0;
+}
+.fade-leave {
+  opacity: 1;
+}
+.fade-enter-active {
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+.fade-leave-active {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+.slide-left-enter,
+.slide-right-leave-active {
+  opacity: 0;
+  -webkit-transform: translate(100%, 0);
+  transform: translate(100%, 0);
+}
+.slide-left-leave-active,
+.slide-right-enter {
+  opacity: 0;
+  -webkit-transform: translate(-100%, 0);
+  transform: translate(-100% 0);
+}
+// vant ui 样式覆盖
+.van-button--large {
+  height: 2.4rem;
+  line-height: 2.4rem;
+}
+.van-button--primary {
+  background: @theme;
+  color: #ffffff;
+}
+.van-list__loading,
+.van-list__finished-text {
+  width: 100%;
+}
+.van-swipe__track {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
